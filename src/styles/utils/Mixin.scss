@@ -1,0 +1,17 @@
+// RWD
+$media: (
+  mobile: 576px,
+  tablet: 769px,
+);
+
+@mixin rwd($breakpoint, $width: "max-width") {
+  @if map-has-key($media, $breakpoint) {
+    $point: map-get($media, $breakpoint);
+
+    @media ($width: $point) {
+      @content;
+    }
+  } @else {
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
