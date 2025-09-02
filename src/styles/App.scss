@@ -7,6 +7,10 @@
 @import "base/Reset";
 @import "base/Base";
 
+//components
+@import "components/CardImg";
+
+
 //page
-@import "pages/Home"
-// @import "pages/Second";
+@import "pages/Home";
+@import "pages/About";

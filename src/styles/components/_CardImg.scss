@@ -1,0 +1,60 @@
+$square-size:400px;
+
+.home-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $colors-white-0;
+    padding: 18px;
+    width: 100%;
+    max-width: $square-size;
+    display: grid;
+    row-gap: 0.5rem;
+
+    transform: translate(-50%, -50%);
+
+    .card-face{
+      position: relative;
+      background-color: $colors-primary-600;
+      margin-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:10px;
+      width: min($square-size, 80vmin);  /* 取 400px 與螢幕 80% 的較小值 */
+      height: min($square-size, 80vmin); /* 確保是正方形 */
+
+      .card-eye{
+        position: relative;
+        background-color: $colors-white-0;
+        border-radius: 50%;
+      }
+      .card-eye-beads{
+        background-color: $colors-black-0;
+        position: absolute;
+        border-radius: 50%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translate(0px, 0px);
+      }
+
+      .card-img{
+        width: 100%;
+        height: 100%;;
+        background-image: url("/meiyi.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+      }
+    }
+
+    .card-scroll{
+      display: flex;
+      align-items: center; 
+      grid-row: 5;
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+
+  }

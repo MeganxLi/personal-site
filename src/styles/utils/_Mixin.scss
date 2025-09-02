@@ -1,7 +1,7 @@
 // RWD
 $media: (
   mobile: 576px,
-  tablet: 769px,
+  tablet: 920px,
 );
 
 @mixin rwd($breakpoint, $width: "max-width") {
