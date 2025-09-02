@@ -2,12 +2,15 @@
 @use "../utils/global" as *;
 
 #HorseDrawn{
-  width: '100%';
-  overflow: 'hidden';
+  width: 100%;
+  overflow: hidden;
 
   .drawn-text{
     white-space: 'nowrap';
     display: 'inline-block';
     font-size: 4rem;
+    white-space:nowrap;
+    color: $colors-primary-300;
+    margin-top: 2rem;
   }
 }
