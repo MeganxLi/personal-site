@@ -1,5 +1,7 @@
+@use "../utils/global" as *;
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Quicksand:wght@300..700&family=TASA+Explorer:wght@400..800&display=swap');
+
 html{
   scroll-behavior: smooth; //錨點平滑
 }
@@ -12,6 +14,10 @@ html{
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+}
+
+h1{
+  font-size: 4rem;
 }
 
 h3{

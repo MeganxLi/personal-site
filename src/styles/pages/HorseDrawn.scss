@@ -1,0 +1,13 @@
+
+@use "../utils/global" as *;
+
+#HorseDrawn{
+  width: '100%';
+  overflow: 'hidden';
+
+  .drawn-text{
+    white-space: 'nowrap';
+    display: 'inline-block';
+    font-size: 4rem;
+  }
+}
