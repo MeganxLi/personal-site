@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useEffect, useRef, useState } from 'react'
 
 import { ChevronDown } from 'lucide-react'
@@ -20,7 +21,6 @@ const About = () => {
       if (!eyeLeftRef.current || !eyeRightRef.current) return
 
       // 定義瞳孔可以移動的最大半徑
-      // 假設瞳孔寬度為 20px，眼球容器為 50px
       const MAX_PUPIL_MOVE = 15
 
       // --- 計算左眼瞳孔的位置 ---
@@ -85,14 +85,17 @@ const About = () => {
     <div id="About">
       <div
         className="about-img"
-        style={{ position: isVisible ? 'relative' : 'absolute' }}
       >
         <motion.div
           className="home-card"
-          animate={isVisible
-            ? { x: '-50%', y: '-50%', rotate: -7 }
-            : { x: '-50%', y: 'calc(-50% - 100vh)', rotate: 0 }}
-          transition={{ type: 'spring' }}
+          style={
+            isVisible
+              ? { position: 'relative', top: 0, left: 0 } // About grid 位置
+              : { position: 'fixed', top: '50%', left: '50%' } // Home 中心
+          }
+          animate={isVisible ? { x: -0, y: -0, rotate: -7 } : { x: '-50%', y: '-50%', rotate: 0 }}
+          transition={{ type: 'spring', stiffness: 80, damping: 20 }}
+
         >
           <div
             className="card-face"
@@ -144,14 +147,10 @@ const About = () => {
             )}
         </motion.div>
       </div>
-      <div className="about-text">
-        <h4>About Me</h4>
-        <p>
-          我是一位擁有 7年以上經驗的前端工程師，能獨立負責從
-          需求討論、流程規劃到 UI/UX 設計與前端實作
-          的完整開發流程。擅長打造直覺化、響應式的使用者介面，
-          並與跨部門團隊合作，將業務需求轉化為實際的數位解決方案，
-          同時持續改善使用體驗與效能表現。
+      <div className="about-content">
+        <h3 className="about-title">About Me</h3>
+        <p className="about-text">
+          我是一位擁有 7年以上經驗的前端工程師，能獨立負責從需求討論、流程規劃到 UI/UX 設計與前端實作的完整開發流程。擅長打造直覺化、響應式的使用者介面，並與跨部門團隊合作，將業務需求轉化為實際的數位解決方案，同時持續改善使用體驗與效能表現。
         </p>
       </div>
     </div>
