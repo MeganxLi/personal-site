@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { motion } from 'motion/react'
 
 const eyeSize = '128px'
@@ -134,10 +134,14 @@ const About = () => {
           </div>
           <h3 className="card-title">#Megan Lee</h3>
           <h5 className="card-subtitle">Front-end Engineer & UIUX</h5>
-          <a className="card-scroll bounce" href={isVisible ? '#Home' : '#About'}>
-            {isVisible ? <ChevronUp /> : <ChevronDown />}
-            Scroll Down
-          </a>
+          {isVisible
+            ? <a className="card-mail" href="mailto:ant19950601@gmail.com">ant19950601@gmail.com</a>
+            : (
+              <a className="card-scroll bounce" href="#About">
+                <ChevronDown />
+                Scroll Down
+              </a>
+            )}
         </motion.div>
       </div>
       <div className="about-text">
