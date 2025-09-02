@@ -1,16 +1,13 @@
-//util
-@import "utils/Mixin";
-@import "utils/Variables";
-@import "utils/Animation";
+// utils 全部 forward 在 _index.scss
+@use "utils/index" as *;
 
-//base
-@import "base/Reset";
-@import "base/Base";
+// base
+@use "base/Reset" as *;
+@use "base/Base" as *;
 
-//components
-@import "components/CardImg";
+// components
+@use "components/CardImg" as *;
 
-
-//page
-@import "pages/Home";
-@import "pages/About";
+// pages
+@use "pages/Home" as *;
+@use "pages/About" as *;
