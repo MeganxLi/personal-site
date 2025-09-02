@@ -1,10 +1,12 @@
 //util
 @import "utils/Mixin";
+@import "utils/Variables";
+@import "utils/Animation";
 
 //base
 @import "base/Reset";
 @import "base/Base";
 
 //page
-// @import "pages/First";
+@import "pages/Home"
 // @import "pages/Second";
