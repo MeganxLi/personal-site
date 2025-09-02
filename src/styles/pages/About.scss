@@ -10,7 +10,6 @@ $img-height:550px;
   @include rwd(tablet) {
     row-gap: 2rem;
     flex-direction: column;
-    min-height: 100vh;
   }
 
   .about-img{
