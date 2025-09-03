@@ -26,16 +26,25 @@ $img-height:550px;
   .about-content{
     flex: 1;
     padding: 2rem;
+    padding-right: 3rem;
     @include rwd(tablet) {
       flex: none;
+      padding: 3rem;
     }
 
     .about-title{
-      padding-bottom: 1rem;
     }
 
     .about-text{
       line-height: 1.7rem;
+      padding: 1.5rem 0;
+    }
+
+    .about-link-content{
+      text-align: right;
+    }
+    .about-link-item{
+      padding-right: 1.5rem;
     }
   }
 
