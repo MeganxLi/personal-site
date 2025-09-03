@@ -1,0 +1,90 @@
+@use "../utils/global" as *;
+
+#Works{
+  width: 100%;
+  background-color: rgba($colors-white-0, 0.4); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 12px; 
+  border: 1px solid rgba($colors-white-0, 0.2);     
+  display: flex;
+  justify-content: center;
+
+  .appear{
+    width: 100%;
+  }
+
+  li{
+    line-height: 1.3rem;
+    &::marker {
+    content: "- "; 
+    color: #333;   
+    }
+  }
+
+  .works-title{
+    padding-bottom: 4rem;
+  }
+
+  .works-content{
+    .works-item{
+      &:not(:last-child)::after {
+        content: "";
+        display: block;
+        background: $colors-primary-600;
+        flex: none;
+        height: 2px;
+        margin: 2rem 0;
+        opacity: 0.1;
+        transition-duration: 1400ms;
+        transition-timing-function: cubic-bezier(1, 0, 0, 1);
+        width: 1080px;
+        max-width: 100%;
+      }
+
+      .work-experience{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        @include rwd(tablet) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      .work-title{
+        padding-bottom: 1rem;
+      }
+
+      .work-company,.work-year{
+        color: $colors-black-900;
+      }
+
+      .work-year{
+        display: flex;
+        align-items: center;
+
+        svg{
+          margin-right: 0.5rem;
+        }
+
+        .work-total-year::before{
+          content: "·";
+          padding: 0 0.5rem;
+        }
+      }
+    
+
+      .work-description{
+        padding-top: 1rem;
+        padding-left: 0.5rem;
+      }
+
+      .description-title{
+        font-weight: bold;
+        padding: 0.5rem 0;
+      }
+    }
+  }
+ 
+}

@@ -9,6 +9,8 @@ $square-size:400px;
     max-width: $square-size;
     display: grid;
     row-gap: 0.5rem;
+    box-sizing: content-box;
+    border-radius: 0.5rem;
 
 
     @include rwd(mobile) {

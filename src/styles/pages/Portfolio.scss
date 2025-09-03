@@ -1,0 +1,67 @@
+@use "../utils/global" as *;
+#Portfolio{
+   @include rwd(mobile) {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+  .portfolio-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @include rwd(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include rwd(mobile) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portfolio-item{
+      padding: 0.75rem;
+      height: auto;
+      width: 100%;
+      max-width: 100%;
+      background-color: $colors-white-0;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      font-weight: revert;
+      display: flex;
+      flex-direction: column;
+
+      &:hover{
+        box-shadow: 4px 6px 10px rgba($colors-black-0, 0.3);
+      }
+
+      .portfolio-img{
+        aspect-ratio: 1 / 1;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 100%;
+        border: 0.75rem solid $colors-black-0;
+        background-color: $colors-black-0;
+      }
+
+      .portfolio-item-title{
+        padding: 0.5rem 0 ;
+      }
+
+      .portfolio-item-link{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: flex-end;
+        margin-top: auto;
+
+        svg:hover{
+          stroke-width:2;
+          color: rgba($colors-black-0, 0.7);
+        }
+      }
+     
+    }
+
+    
+  }
+}

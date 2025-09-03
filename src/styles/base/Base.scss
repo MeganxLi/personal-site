@@ -2,6 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Quicksand:wght@300..700&family=TASA+Explorer:wght@400..800&display=swap');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html{
   scroll-behavior: smooth; //錨點平滑
 }
@@ -62,5 +68,5 @@ p{
 .appear{
   width: 100%;
   max-width: 1400px;
-  box-sizing: border-box;
+  padding: 5rem;
 }
