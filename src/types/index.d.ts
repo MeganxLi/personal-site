@@ -11,3 +11,11 @@ type WorksItemType = {
   end_year:string,
   description:string[] | { project:string, text:string[] }[]
 }
+
+type PortfolioItemType = {
+  title:string,
+  link:string,
+  img:boolean,
+  github:boolean,
+  figma?:string
+}
