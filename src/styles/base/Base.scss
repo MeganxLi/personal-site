@@ -18,10 +18,12 @@ body{
 }
 
 #root {
-  min-height: 100vh;
   width: 100%;
-  max-width: 1400px;
+  min-height: 100vh;
   color: $colors-black-300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 h1{
@@ -55,4 +57,10 @@ a{
 
 p{
   line-height: 1.25rem;
+}
+
+.appear{
+  width: 100%;
+  max-width: 1400px;
+  box-sizing: border-box;
 }

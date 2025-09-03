@@ -1,7 +1,7 @@
 import SkillsSetting from '../constants/SkillsSetting'
 
 const Skills = () => (
-  <div id="Skills">
+  <div id="Skills" className="appear">
     <h2 className="skills-title">Skills</h2>
     <div className="skills-content">
       {SkillsSetting.map((Items) => (
