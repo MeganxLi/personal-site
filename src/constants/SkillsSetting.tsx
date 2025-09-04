@@ -2,17 +2,17 @@ import { Blinds, Code, Palette } from 'lucide-react'
 
 const SkillsSetting : SkillsItemType[] = [
   {
-    title: 'Development',
+    title: 'Skills.development',
     icon: <Code />,
     skills: ['React', 'Scss', 'Typescript', 'JavaScript', 'MySql', 'Canvas', 'PHP'],
   },
   {
-    title: 'Design & UI/UX',
+    title: 'Skills.uiux',
     icon: <Palette />,
     skills: ['Figma', 'Illustrator', 'Photoshop'],
   },
   {
-    title: 'Office Productivity',
+    title: 'Skills.office',
     icon: <Blinds />,
     skills: ['Word', 'Excel', 'PowerPoint'],
   },

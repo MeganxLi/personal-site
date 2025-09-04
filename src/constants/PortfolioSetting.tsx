@@ -22,11 +22,12 @@ export const TagEnum = {
   gsap: 'GSAP',
   redux: 'React-Redux',
   vue: 'Vue',
+  i18next: 'i18next',
 }
 
 const PortfolioSetting : PortfolioItemType[] = [
   {
-    title: '簡易易經占卜',
+    title: 'Portfolio.project1.title',
     link: 'i-ching-easy',
     img: true,
     github: true,
@@ -34,7 +35,7 @@ const PortfolioSetting : PortfolioItemType[] = [
     tag: [TagEnum.react, TagEnum.type, TagEnum.vite],
   },
   {
-    title: '咖啡清單',
+    title: 'Portfolio.project2.title',
     link: 'coffee-guide',
     img: true,
     github: true,
@@ -42,14 +43,14 @@ const PortfolioSetting : PortfolioItemType[] = [
     tag: [TagEnum.react, TagEnum.linaria, TagEnum.type, TagEnum.vite],
   },
   {
-    title: '角色投影介紹',
+    title: 'Portfolio.project3.title',
     link: 'character-spotlight',
     img: true,
     github: true,
-    tag: [TagEnum.react, TagEnum.styled, TagEnum.type, TagEnum.vite],
+    tag: [TagEnum.react, TagEnum.styled, TagEnum.i18next, TagEnum.type],
   },
   {
-    title: '時間計算機',
+    title: 'Portfolio.project4.title',
     link: 'time-computer',
     img: true,
     github: true,
@@ -57,14 +58,14 @@ const PortfolioSetting : PortfolioItemType[] = [
     tag: [TagEnum.react, TagEnum.ant, TagEnum.vite],
   },
   {
-    title: '點點簽',
+    title: 'Portfolio.project5.title',
     link: 'dotted-sign',
     img: true,
     github: true,
     tag: [TagEnum.react, TagEnum.tailwind, TagEnum.jotai, TagEnum.pdf, TagEnum.fabric],
   },
   {
-    title: 'Scrum 互動頁面',
+    title: 'Portfolio.project6.title',
     link: 'scrum-xinshou-village',
     img: true,
     github: true,
@@ -72,21 +73,21 @@ const PortfolioSetting : PortfolioItemType[] = [
 
   },
   {
-    title: 'THE F2E 互動式網頁',
+    title: 'Portfolio.project7.title',
     link: 'parallax-scrolling-website',
     img: true,
     github: true,
     tag: [TagEnum.react, TagEnum.linaria, TagEnum.gsap],
   },
   {
-    title: '仿台灣高鐵站的電子列車時刻表',
+    title: 'Portfolio.project8.title',
     link: 'thsr-departure-board',
     img: true,
     github: true,
     tag: [TagEnum.react, TagEnum.styled, TagEnum.redux],
   },
   {
-    title: '台灣銀行清單',
+    title: 'Portfolio.project9.title',
     link: 'twBankCode',
     img: true,
     github: true,
@@ -94,7 +95,7 @@ const PortfolioSetting : PortfolioItemType[] = [
     tag: [TagEnum.vue, TagEnum.tailwind],
   },
   {
-    title: 'React Calculator 計算機',
+    title: 'Portfolio.project10.title',
     link: 'react-calculator',
     img: true,
     github: true,

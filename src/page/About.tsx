@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { useEffect, useRef, useState } from 'react'
 
+import i18next from 'i18next'
 import { ChevronDown } from 'lucide-react'
 import { motion } from 'motion/react'
 
@@ -8,7 +9,9 @@ import AboutLink from '../components/AboutLink'
 
 const eyeSize = '128px'
 const beadSize = '80px'
+
 const About = () => {
+  const { t } = i18next
   const eyeLeftRef = useRef<HTMLDivElement>(null)
   const eyeRightRef = useRef<HTMLDivElement>(null)
   const lastScrollY = useRef<number>(0)
@@ -138,7 +141,7 @@ const About = () => {
             </motion.div>
           </div>
           <h3 className="card-title">#Megan Lee</h3>
-          <h5 className="card-subtitle">Front-end Engineer & UIUX</h5>
+          <h5 className="card-subtitle">{t('Home.subtitle')}</h5>
           {isVisible
             ? <a className="card-mail" href="mailto:ant19950601@gmail.com">ant19950601@gmail.com</a>
             : (
@@ -150,9 +153,11 @@ const About = () => {
         </motion.div>
       </div>
       <div className="about-content">
-        <h3 className="about-title">About Me</h3>
+        <h3 className="about-title" style={{ whiteSpace: 'pre-line' }}>
+          {t('About.title')}
+        </h3>
         <p className="about-text">
-          嗨！我是李美儀，我是7年以上經驗的前端工程師，能獨立負責從需求討論、流程規劃到 UI/UX 設計與前端實作的完整開發流程。擅長打造直覺化、響應式的使用者介面，並與跨部門團隊合作，將業務需求轉化為實際的數位解決方案，同時持續改善使用體驗與效能表現。
+          {t('About.text')}
         </p>
         <AboutLink />
       </div>

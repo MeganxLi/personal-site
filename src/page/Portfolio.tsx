@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import i18next from 'i18next'
 import {
   ArrowLeft, ArrowRight, ChevronRight, Figma, Github,
 } from 'lucide-react'
@@ -8,6 +9,7 @@ import { motion } from 'motion/react'
 import PortfolioSetting, { AnimationEnum, github_page, github_url } from '../constants/PortfolioSetting'
 
 const Portfolio = () => {
+  const { t } = i18next
   const [tempIndex, setTempIndex] = useState(0)
   const [carouselIndex, setCarouselIndex] = useState(0)
   const [phase, setPhase] = useState<PortfolioAnimationType>(AnimationEnum.idle)
@@ -57,7 +59,7 @@ const Portfolio = () => {
     <div id="Portfolio">
       <div className="appear">
         <div className="portfolio-top">
-          <h3 className="portfolio-title">Portfolio</h3>
+          <h3 className="portfolio-title">{t('Portfolio.title')}</h3>
           <div className="portfolio-carousel-button">
             <button type="button" onClick={prevIndex} disabled={disabledButton}><ArrowLeft size={16} /></button>
             <button type="button" onClick={nextIndex} disabled={disabledButton}><ArrowRight size={16} /></button>
@@ -136,7 +138,7 @@ const Portfolio = () => {
               rel="noreferrer"
             >
               <div className="portfolio-item-content">
-                <h5 className="portfolio-item-title">{item.title}</h5>
+                <h5 className="portfolio-item-title">{t(`${item.title}`)}</h5>
                 <div className="portfolio-label">
                   {item.tag?.map((tag) => <p key={tag}>{`# ${tag}`}</p>)}
                 </div>
