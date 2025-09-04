@@ -65,6 +65,23 @@ p{
   line-height: 1.25rem;
 }
 
+button{
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  align-self: center; 
+  border: 1px solid rgba($colors-black-0, 0.2);
+  cursor: pointer;
+
+  &:disabled{
+  border-color: rgba($colors-black-0, 0.1);
+  color:rgba($colors-black-0, 0.2) ;
+    svg{
+      color:rgba($colors-black-0, 0.2) ;
+    }
+  }
+}
+
 .appear{
   width: 100%;
   max-width: 1400px;
