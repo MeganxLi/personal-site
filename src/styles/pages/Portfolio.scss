@@ -4,6 +4,7 @@
   width:100%;    
   display: flex;
   justify-content: center;
+  background-color: $colors-white-200;
 
   &::before{
     content: "";
@@ -14,7 +15,7 @@
     width:100%;
     height: calc(100% - 12rem);
     pointer-events: none;
-    z-index: -1;
+    z-index: 0;
 
     @include rwd(tablet) {
       height: 100%;
@@ -30,13 +31,19 @@
     justify-content: space-between;
     padding: 3rem 0;
     align-items: flex-end;
+    position: relative;
 
     @include rwd(mobile) {
       align-items: center;
+      flex-wrap: wrap; 
+      justify-content: space-between;
     }
 
     .portfolio-title{
       font-weight: 500;
+      @include rwd(mobile) {
+        order: 1;
+      }
     }
 
     .portfolio-carousel-button, .portfolio-all{
@@ -44,12 +51,20 @@
       align-items: center;
       gap:1rem;
     }
+
+    .portfolio-carousel-button{
+      @include rwd(mobile) {
+        order: 3;
+        width: 100%; 
+        justify-content: center;
+        margin-top: 3rem;
+        
+      }
+    }
+    
     .portfolio-all{
       @include rwd(mobile) {
-        position:absolute;
-        bottom:0;
-        right:0;
-        margin: 3rem;
+        order: 2;
       }
     }
     
@@ -58,7 +73,7 @@
   .portfolio-carousel-content {
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    margin-bottom: 3rem;
 
 
     .portfolio-carousel-item{
