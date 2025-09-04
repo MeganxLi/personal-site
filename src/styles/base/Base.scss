@@ -86,4 +86,8 @@ button{
   width: 100%;
   max-width: 1400px;
   padding: 5rem;
+
+  @include rwd(mobile) {
+    padding: 3rem;
+  }
 }

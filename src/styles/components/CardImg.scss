@@ -12,12 +12,10 @@ $square-size:400px;
     box-sizing: content-box;
     border-radius: 0.5rem;
 
-
     @include rwd(mobile) {
       width: auto;
     }
     
-
     .card-face{
       position: relative;
       background-color: $colors-primary-600;

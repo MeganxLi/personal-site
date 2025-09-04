@@ -1,18 +1,26 @@
 @use "../utils/global" as *;
 #Portfolio{
   position: relative;
-  height: 100%;
+  width:100%;    
+  display: flex;
+  justify-content: center;
+
   &::before{
     content: "";
     position: absolute;
     top:0;
     left: 0;
     background-color: $colors-primary-200;
-    width: 100%;
-    height: calc(100vh - 12rem);
+    width:100%;
+    height: calc(100% - 12rem);
     pointer-events: none;
     z-index: -1;
+
+    @include rwd(tablet) {
+      height: 100%;
+    }
   }
+
   a{
     color: $colors-black-100;
   }
@@ -23,14 +31,26 @@
     padding: 3rem 0;
     align-items: flex-end;
 
+    @include rwd(mobile) {
+      align-items: center;
+    }
+
     .portfolio-title{
       font-weight: 500;
     }
 
-    .portfolio-carousel-button,  .portfolio-all{
+    .portfolio-carousel-button, .portfolio-all{
       display: flex;
       align-items: center;
-      gap:1rem
+      gap:1rem;
+    }
+    .portfolio-all{
+      @include rwd(mobile) {
+        position:absolute;
+        bottom:0;
+        right:0;
+        margin: 3rem;
+      }
     }
     
   }
@@ -88,12 +108,26 @@
     font-weight: 500;
     grid-area: 1 / 1;
     gap: 1rem;
+    @include rwd(tablet) {
+      flex-direction: column;
+    }
 
+    
     .portfolio-item-content{
       width: 40%;
 
+      @include rwd(tablet) {
+        width: 100%;    
+      
+      }
+
       .portfolio-item-title{
         padding-bottom: 2rem;
+     
+      }
+
+      .portfolio-label{
+     
       }
 
       .portfolio-item-link{
@@ -112,6 +146,9 @@
       width: 60%;
       display: block; 
       overflow: hidden;
+      @include rwd(tablet) {
+        width: 100%;
+      }
 
       img{
         width: 100%;
