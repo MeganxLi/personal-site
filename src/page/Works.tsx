@@ -1,3 +1,5 @@
+import { Fragment } from 'react'
+
 import i18next from 'i18next'
 import { Calendar } from 'lucide-react'
 
@@ -33,10 +35,10 @@ const Works = () => {
                     return (<li key={description}>{t(`${description}`)}</li>)
                   }
                   return (
-                    <>
+                    <Fragment key={description.project}>
                       <p className="description-title">{t(`${description.project}`)}</p>
                       {description.text.map((text) => <li key={text}>{t(`${text}`)}</li>)}
-                    </>
+                    </Fragment>
                   )
                 })}
               </ul>
