@@ -12,6 +12,7 @@ import Skills from './page/Skills'
 import Works from './page/Works'
 
 function App() {
+  const { t } = i18next
   const [lang, setLang] = useState<string>(LangSetting.zh) // 英:true
 
   const changeLang = (value:string) => {
@@ -37,7 +38,7 @@ function App() {
       <Portfolio />
       <footer>
         <div className="appear">
-          <span>Copyright © MEI YI LEE</span>
+          <span>{t('footer.copyright')}</span>
           <AboutLink />
           <button type="button" className="footer-home">
             <a href="#About">

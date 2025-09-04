@@ -60,5 +60,8 @@
     "project8": { "title": "仿台灣高鐵站的電子列車時刻表" },
     "project9": { "title": "台灣銀行清單" },
     "project10": { "title": "React Calculator 計算機" }
+  },
+  "footer":{
+    "copyright":"Copyright © MEI YI LEE"
   }
 }
