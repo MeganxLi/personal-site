@@ -1,3 +1,16 @@
+@use "../utils/global" as *;
 #Home{
   height: 100vh;
+  padding:1rem;
+
+  .language-button{
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    color: $colors-black-900;
+
+    span.checked{
+      color: $colors-black-400;
+    }
+  }
 }
