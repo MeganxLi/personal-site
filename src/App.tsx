@@ -1,33 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useLayoutEffect, useState } from 'react'
+
+import { ChevronUp } from 'lucide-react'
+
+import AboutLink from './components/AboutLink'
+import LangSetting from './constants/LangSetting'
+import i18next from './i18n'
+import About from './page/About'
+import Home from './page/Home'
+import Portfolio from './page/Portfolio'
+import Skills from './page/Skills'
+import Works from './page/Works'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [lang, setLang] = useState<string>(LangSetting.zh) // 英:true
+
+  const changeLang = (value:string) => {
+    i18next.changeLanguage(value)
+    setLang(value)
+    localStorage.setItem('local', JSON.stringify(value))
+  }
+
+  useLayoutEffect(() => {
+    const getLocal = JSON.parse(localStorage.getItem('local')!)
+    const getLocalLang = getLocal || LangSetting.zh
+
+    i18next.changeLanguage(getLocalLang)
+    setLang(getLocalLang)
+  }, [])
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Home changeLang={changeLang} lang={lang} />
+      <About />
+      <Skills />
+      <Works />
+      <Portfolio />
+      <footer>
+        <div className="appear">
+          <span>Copyright © MEI YI LEE</span>
+          <AboutLink />
+          <button type="button" className="footer-home">
+            <a href="#About">
+              Home
+              <ChevronUp size={20} />
+            </a>
+          </button>
+        </div>
+      </footer>
     </>
   )
 }

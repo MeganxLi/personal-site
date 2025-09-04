@@ -1,0 +1,44 @@
+@use "../utils/global" as *;
+
+$img-height:550px;
+#About{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  @include rwd(tablet) {
+    row-gap: 2rem;
+    flex-direction: column;
+  }
+
+  .about-img{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    min-height: $img-height;
+    @include rwd(tablet) {
+      flex: none;
+    }
+  }
+
+
+  .about-content{
+    flex: 1;
+    padding: 2rem;
+    padding-right: 3rem;
+    @include rwd(tablet) {
+      flex: none;
+      padding: 3rem;
+    }
+
+    .about-title{
+    }
+
+    .about-text{
+      line-height: 1.7rem;
+      padding: 1.5rem 0;
+    }
+  }
+
+}

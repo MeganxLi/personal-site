@@ -1,0 +1,206 @@
+@use "../utils/global" as *;
+#Portfolio{
+  position: relative;
+  width:100%;    
+  display: flex;
+  justify-content: center;
+  background-color: $colors-white-200;
+
+  &::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: $colors-primary-200;
+    width:100%;
+    height: calc(100% - 12rem);
+    pointer-events: none;
+    z-index: 0;
+
+    @include rwd(tablet) {
+      height: 100%;
+    }
+  }
+
+  a{
+    color: $colors-black-100;
+  }
+
+  .portfolio-top{
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 0;
+    align-items: flex-end;
+    position: relative;
+
+    @include rwd(mobile) {
+      align-items: center;
+      flex-wrap: wrap; 
+      justify-content: space-between;
+    }
+
+    .portfolio-title{
+      font-weight: 500;
+      @include rwd(mobile) {
+        order: 1;
+      }
+    }
+
+    .portfolio-carousel-button, .portfolio-all{
+      display: flex;
+      align-items: center;
+      gap:1rem;
+    }
+
+    .portfolio-carousel-button{
+      @include rwd(mobile) {
+        order: 3;
+        width: 100%; 
+        justify-content: center;
+        margin-top: 3rem;
+        
+      }
+    }
+    
+    .portfolio-all{
+      @include rwd(mobile) {
+        order: 2;
+      }
+    }
+    
+  }
+
+  .portfolio-carousel-content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+
+
+    .portfolio-carousel-item{
+      padding: 1rem;
+      cursor: pointer;
+      position: relative;
+
+      &::after{
+        $size:4px;
+
+        content: "";
+        position: absolute;
+        width: $size;
+        height: $size;
+        background-color: rgba($colors-black-300,0.3);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      &:hover::after{
+        background-color: rgba($colors-primary-400,0.8);
+      }
+
+      &.checked::after{
+        background-color: rgba($colors-black-300,0.8);
+      }
+
+      &.disable::after{
+        opacity: 0.4;
+      }
+    }
+  }
+
+ 
+  .portfolio-list{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    margin: 0;
+    padding: 0;
+  }
+
+  .portfolio-item{
+    display: flex;
+    font-weight: 500;
+    grid-area: 1 / 1;
+    gap: 1rem;
+    @include rwd(tablet) {
+      flex-direction: column;
+    }
+
+    
+    .portfolio-item-content{
+      width: 40%;
+
+      @include rwd(tablet) {
+        width: 100%;    
+      
+      }
+
+      .portfolio-item-title{
+        padding-bottom: 2rem;
+     
+      }
+
+      .portfolio-label{
+     
+      }
+
+      .portfolio-item-link{
+        margin-top: 1rem;
+        display: flex;
+        gap:0.5rem;
+        
+        svg:hover{
+          stroke-width:2;
+          color: $colors-primary-600;
+        }
+      }
+    }
+
+    .portfolio-item-img{
+      width: 60%;
+      display: block; 
+      overflow: hidden;
+      @include rwd(tablet) {
+        width: 100%;
+      }
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* 填滿父層，可能會裁切 */
+        object-position: center;
+        display: block;
+      }
+    }
+
+    &:hover {
+      color: $colors-primary-600;
+
+      svg {
+        color: $colors-primary-600;
+      }
+
+      .portfolio-item-img img {
+        transform: scale(1.1);
+      }
+    }
+
+  }
+
+  .white{
+    z-index: 1000;
+
+    .portfolio-item-content>.white-cover{
+      height: 100%;
+      width: 100%;
+    }
+
+    .portfolio-item-img>.white-cover{
+      background-color: $colors-primary-600;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}

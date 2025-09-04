@@ -1,0 +1,64 @@
+{
+  "Home": {
+    "subtitle": "Front-end Engineer & UIUX"
+  },
+  "About": {
+    "title": "From code to design,\n from design to experience",
+    "text": "Hi! I'm Megan Lee, a front-end engineer with over 7 years of experience. I can independently manage the full development cycle—from requirement analysis and workflow planning to UI/UX design and front-end implementation. I specialize in building intuitive, responsive user interfaces and collaborating with cross-functional teams to transform business needs into practical digital solutions, while continuously improving user experience and performance."
+  },
+  "Skills": {
+    "title": "Skills",
+    "development": "Development",
+    "uiux": "Design & UI/UX",
+    "office": "Office Productivity"
+  },
+  "Works": {
+    "title": "Experience",
+    "experience1": {
+      "job_title": "Working Holiday Participant",
+      "title": "Australia",
+      "description1": "Contributed to warehouse and factory operations handling high-volume orders and production tasks, ensuring accuracy and efficiency under fast-paced conditions",
+      "description2": "Rotated across multiple roles, developing adaptability, problem-solving, and the ability to quickly learn new processes",
+      "description3": "Collaborated with colleagues from diverse cultural backgrounds, enhancing cross-cultural communication, teamwork, and workplace resilience"
+    },
+    "experience2": {
+      "job_title": "Front-end Engineer",
+      "title": "EVER FORTUNE.AI",
+      "description1": "Developed and maintained physician and radiologist systems, integrating with in-house AI APIs to enhance user workflows and clinical decision-making",
+      "description2": "Implemented interactive front-end canvas features, supporting complex medical imaging visualization and operations",
+      "description3": "Optimized computational performance and front-end rendering for real-time data processing",
+      "description4": "Collaborated with cross-functional teams, including AI engineers and medical professionals, to translate clinical requirements into functional UI/UX",
+      "description5": "Contributed to improving user experience and efficiency in medical diagnostics systems through iterative development and testing"
+    },
+    "experience3": {
+      "job_title": "Project assistant",
+      "title": "Feng Chia University",
+      "web_dev": {
+        "project_name": "Web Development",
+        "description1": "Designed, developed, and maintained front-end and back-end components of the organization's website, ensuring smooth functionality and user-friendly UI/UX",
+        "description2": "Developed and optimized MySQL queries, performing testing and debugging to improve database performance",
+        "description3": "Implemented responsive UI/UX designs to enhance user engagement and accessibility"
+      },
+      "project_manage": {
+        "project_name": "Project & Event Management",
+        "description1": "Coordinated and executed annual international conferences hosting 150+ participants, managing schedules, logistics, and cross-cultural communication",
+        "description2": "Managed project timelines, ensuring milestones were met and deliverables completed on time",
+        "description3": "Facilitated international academic exchanges and multi-party meetings, enhancing collaboration across institutions",
+        "description4": "Supported administrative tasks related to university operations and organizational compliance"
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Portfolio",
+    "project1": { "title": "Simple I Ching Divination" },
+    "project2": { "title": "Coffee Guide" },
+    "project3": { "title": "Character Spotlight" },
+    "project4": { "title": "Time Calculator" },
+    "project5": { "title": "Dotted Sign" },
+    "project6": { "title": "Scrum Interactive Page" },
+    "project7": { "title": "THE F2E Interactive Website" },
+    "project8": { "title": "Taiwan High-Speed Rail Departure Board" },
+    "project9": { "title": "Taiwan Bank List" },
+    "project10": { "title": "React Calculator" }
+  }
+}

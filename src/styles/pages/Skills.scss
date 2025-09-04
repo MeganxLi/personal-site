@@ -1,0 +1,64 @@
+@use "../utils/global" as *;
+
+#Skills{
+  padding: 1.5rem;
+  padding-bottom: 3rem;
+
+  .skills-title{
+    margin: 1.5rem;
+    text-align: center;
+  }
+
+  .skills-content{
+    display: flex;
+    width: 100%;
+    gap: 3rem;
+
+    @include rwd(tablet) {
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+
+  }
+
+  .skills-Item{
+    position: relative;
+    flex: 1;
+    width: 33%;
+    padding: 2rem;
+    padding-left: 4rem;
+    background-color: rgba($colors-white-0, 0.3); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border-radius: 12px; 
+    border: 1px solid rgba($colors-white-0, 0.2);
+    
+    @include rwd(tablet) {  
+      width: 100%;
+      max-width: 300px;
+    }
+
+    svg{
+      position: absolute;
+      top: 1.5rem;
+      left: 1rem;
+      background-color: rgba($colors-white-200, 0.3);
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+    }
+
+    .skill-title{
+      margin-bottom: 1rem;
+    }
+
+    .skill-text{
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+    }
+
+  }
+  
+
+}

@@ -1,0 +1,64 @@
+{
+  "Home": {
+    "subtitle": "前端工程師 & UIUX"
+  },
+  "About": {
+    "title": "把程式碼寫成設計，\n把設計落實成體驗的工程師",
+    "text": "嗨！我是李美儀，我是7年以上經驗的前端工程師，能獨立負責從需求討論、流程規劃到 UI/UX 設計與前端實作的完整開發流程。擅長打造直覺化、響應式的使用者介面，並與跨部門團隊合作，將業務需求轉化為實際的數位解決方案，同時持續改善使用體驗與效能表現。"
+  },
+  "Skills": {
+    "title": "技能",
+    "development": "前端開發",
+    "uiux": "設計與 UI/UX",
+    "office": "辦公軟體"
+  },
+  "Works": {
+    "title": "工作經歷",
+    "experience1": {
+      "job_title": "打工度假",
+      "title": "澳洲",
+      "description1": "參與倉庫與工廠作業，處理大量訂單及生產任務，確保在快節奏環境下的準確性與效率",
+      "description2": "輪調多個角色，培養適應力、解決問題能力以及快速學習新流程的能力",
+      "description3": "與來自不同文化背景的同事協作，提升跨文化溝通、團隊合作及職場韌性"
+    },
+    "experience2": {
+      "job_title": "前端工程師",
+      "title": "長佳智能股份有限公司",
+      "description1": "開發並維護醫師與放射師系統，串接自研 AI API，以提升使用者流程與臨床決策效率",
+      "description2": "實作互動式前端 Canvas 功能，支援複雜醫療影像的呈現與操作",
+      "description3": "優化計算效能與前端渲染，支援即時資料處理",
+      "description4": "與 AI 工程師及醫療專業人員跨部門協作，將臨床需求轉化為可用的 UI/UX 功能",
+      "description5": "透過迭代開發與測試，提升醫療診斷系統的使用體驗與效率"
+    },
+    "experience3": {
+      "job_title": "專案助理",
+      "title": "逢甲大學",
+      "web_dev": {
+        "project_name": "網頁開發",
+        "description1": "設計、開發並維護組織網站前端與後端功能，確保系統運作順暢及使用者介面友善",
+        "description2": "開發與優化 MySQL 查詢語法，進行測試與除錯以提升資料庫效能",
+        "description3": "實作響應式 UI/UX 設計，增強使用者互動性與可達性"
+      },
+      "project_manage": {
+        "project_name": "專案與活動管理",
+        "description1": "協調並執行每年舉辦的國際研討會，超過 150 名參與者，管理行程、後勤及跨文化溝通",
+        "description2": "管理專案進度，確保里程碑達成及交付成果按時完成",
+        "description3": "促進國際學術交流及多方會議，提升跨機構合作",
+        "description4": "支援校務行政管理及組織規範相關工作"
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "作品集",
+    "project1": { "title": "簡易易經占卜" },
+    "project2": { "title": "咖啡清單" },
+    "project3": { "title": "角色投影介紹" },
+    "project4": { "title": "時間計算機" },
+    "project5": { "title": "點點簽" },
+    "project6": { "title": "Scrum 互動頁面" },
+    "project7": { "title": "THE F2E 互動式網頁" },
+    "project8": { "title": "仿台灣高鐵站的電子列車時刻表" },
+    "project9": { "title": "台灣銀行清單" },
+    "project10": { "title": "React Calculator 計算機" }
+  }
+}
