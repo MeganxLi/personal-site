@@ -22,3 +22,8 @@ type PortfolioItemType = {
 }
 
 type PortfolioAnimationType = 'idle' | 'expand' | 'shrink'
+
+type HomeProps = {
+  changeLang: (value: string) => void
+  lang:string
+}

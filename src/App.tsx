@@ -1,19 +1,37 @@
+import { useLayoutEffect, useState } from 'react'
+
 import { ChevronUp } from 'lucide-react'
 
 import AboutLink from './components/AboutLink'
+import LangSetting from './constants/LangSetting'
+import i18next from './i18n'
 import About from './page/About'
 import Home from './page/Home'
-import HorseDrawn from './page/HorseDrawn'
 import Portfolio from './page/Portfolio'
 import Skills from './page/Skills'
 import Works from './page/Works'
 
 function App() {
+  const [lang, setLang] = useState<string>(LangSetting.zh) // 英:true
+
+  const changeLang = (value:string) => {
+    i18next.changeLanguage(value)
+    setLang(value)
+    localStorage.setItem('local', JSON.stringify(value))
+  }
+
+  useLayoutEffect(() => {
+    const getLocal = JSON.parse(localStorage.getItem('local')!)
+    const getLocalLang = getLocal || LangSetting.zh
+
+    i18next.changeLanguage(getLocalLang)
+    setLang(getLocalLang)
+  }, [])
+
   return (
     <>
-      <Home />
+      <Home changeLang={changeLang} lang={lang} />
       <About />
-      <HorseDrawn />
       <Skills />
       <Works />
       <Portfolio />
