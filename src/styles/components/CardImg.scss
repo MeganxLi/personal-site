@@ -1,6 +1,7 @@
 @use "../utils/global" as *;
 
 $square-size:400px;
+$eyeSize:128px;
 
 .home-card{
     background-color: $colors-white-0;
@@ -28,10 +29,13 @@ $square-size:400px;
       height: min($square-size, 80vmin); /* 確保是正方形 */
 
       .card-eye{
+        width: $eyeSize;
+        height: $eyeSize;
         position: relative;
         background-color: $colors-white-0;
         border-radius: 50%;
       }
+
       .card-eye-beads{
         background-color: $colors-black-0;
         position: absolute;
@@ -39,6 +43,15 @@ $square-size:400px;
         top:50%;
         left: 50%;
         transform: translate(-50%, -50%) translate(0px, 0px);
+      }
+
+      .card-eye-x{ 
+        position: absolute;
+        border-radius: 50%;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%) translate(0px, 0px);
+        
       }
 
       .card-img{
