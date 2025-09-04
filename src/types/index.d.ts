@@ -18,4 +18,7 @@ type PortfolioItemType = {
   img:boolean,
   github:boolean,
   figma?:string
+  tag?:string[]
 }
+
+type PortfolioAnimationType = 'idle' | 'expand' | 'shrink'
