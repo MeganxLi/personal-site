@@ -54,6 +54,7 @@ h4{
 
 h5{
   font-size: 1.25rem;
+  line-height: 1.2;
 }
 
 a{
@@ -88,6 +89,34 @@ button{
   padding: 5rem;
 
   @include rwd(mobile) {
-    padding: 3rem;
+    padding: 3rem 1rem;
   }
 }
+
+footer{
+  box-sizing: border-box;
+  background-color:$colors-white-200;
+  width:100%;
+
+  .appear{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .link{
+    display: flex;
+    flex-direction: column;
+    a{
+      font-weight: 500;
+      font-size:100%
+    } 
+  }
+
+  .footer-home a{
+    display: flex;
+    gap:0.5rem;
+    align-items: center;
+  }
+}
+

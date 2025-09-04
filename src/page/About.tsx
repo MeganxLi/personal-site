@@ -1,8 +1,10 @@
 /* eslint-disable max-len */
 import { useEffect, useRef, useState } from 'react'
 
-import { ChevronDown, Github, Linkedin } from 'lucide-react'
+import { ChevronDown } from 'lucide-react'
 import { motion } from 'motion/react'
+
+import AboutLink from '../components/AboutLink'
 
 const eyeSize = '128px'
 const beadSize = '80px'
@@ -152,24 +154,7 @@ const About = () => {
         <p className="about-text">
           嗨！我是李美儀，我是7年以上經驗的前端工程師，能獨立負責從需求討論、流程規劃到 UI/UX 設計與前端實作的完整開發流程。擅長打造直覺化、響應式的使用者介面，並與跨部門團隊合作，將業務需求轉化為實際的數位解決方案，同時持續改善使用體驗與效能表現。
         </p>
-        <div className="about-link-content">
-          <a
-            className="about-link-item"
-            href="https://github.com/MeganxLi"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Github />
-          </a>
-          <a
-            className="about-link-item"
-            href="https://www.linkedin.com/in/meiyi-1995/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Linkedin />
-          </a>
-        </div>
+        <AboutLink />
       </div>
     </div>
   )
