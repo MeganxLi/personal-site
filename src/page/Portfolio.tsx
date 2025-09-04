@@ -7,9 +7,11 @@ import {
 import { motion } from 'motion/react'
 
 import PortfolioSetting, { AnimationEnum, github_page, github_url } from '../constants/PortfolioSetting'
+import { smartLink } from '../until/smartLink'
 
 const Portfolio = () => {
   const { t } = i18next
+
   const [tempIndex, setTempIndex] = useState(0)
   const [carouselIndex, setCarouselIndex] = useState(0)
   const [phase, setPhase] = useState<PortfolioAnimationType>(AnimationEnum.idle)
@@ -143,8 +145,14 @@ const Portfolio = () => {
                   {item.tag?.map((tag) => <p key={tag}>{`# ${tag}`}</p>)}
                 </div>
                 <div className="portfolio-item-link">
-                  <a href={github_url + item.link} target="_blank" rel="noreferrer"><Github strokeWidth={1.5} /></a>
-                  {item.figma && <a href={item.figma} target="_blank" rel="noreferrer"><Figma strokeWidth={1.5} /></a>}
+                  <span onClick={() => smartLink(github_url + item.link)}>
+                    <Github strokeWidth={1.5} />
+                  </span>
+                  {item.figma && (
+                  <span onClick={() => smartLink(item.figma!)}>
+                    <Figma strokeWidth={1.5} />
+                  </span>
+                  )}
                 </div>
 
               </div>

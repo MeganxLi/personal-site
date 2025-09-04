@@ -1,0 +1,32 @@
+#NotFound{
+  width:100vw;
+  height:100vh;
+  position: relative;
+
+  .home-card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .notfound-title{
+    text-align: center;
+    padding:1rem 0;
+  }
+
+  .notfound-button{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    width:100%;
+  }
+
+  .notfound-copyright{
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    width:100%;
+    text-align: center;
+  }
+}

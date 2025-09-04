@@ -14,7 +14,9 @@ html{
 
 body{  
   font-family: "Quicksand", "Noto Sans TC", "TASA Explorer", sans-serif;
-  background-image: url("/Gemini_Generated.png");
+   background-image: 
+    linear-gradient(rgba($colors-white-0,0.3), rgba($colors-white-0,0.3)), 
+    url("/Gemini_Generated.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -35,26 +37,35 @@ body{
 h1{
   font-size: 6rem;
   line-height: 1.2;
+  @include rwd(mobile) {
+    font-size: 4.5rem;
+  }
 }
 
 h2{
   font-size: 3rem;
   text-align: center;
+  line-height: 3.5rem;
+  @include rwd(mobile) {
+    font-size: 2.5rem;
+  }
 }
 
 h3{
   font-size: 2rem;
   font-weight: bold;
+  line-height: 2.5rem;
 }
 
 h4{
   font-size: 1.5rem;
   font-weight: bold;
+  line-height: 1.5rem;
 }
 
 h5{
   font-size: 1.25rem;
-  line-height: 1.2;
+  line-height: 1.25rem;
 }
 
 a{
@@ -62,8 +73,13 @@ a{
   font-weight: bold;
 }
 
-p{
+p, span, a{
   line-height: 1.25rem;
+}
+
+button, 
+button * {
+  cursor: pointer;
 }
 
 button{
@@ -72,7 +88,15 @@ button{
   padding: 1rem;
   align-self: center; 
   border: 1px solid rgba($colors-black-0, 0.2);
-  cursor: pointer;
+
+  &:hover{
+    background-color: $colors-primary-600;
+    color:$colors-white-0;
+    border: 1px solid $colors-primary-600;
+    svg{
+      color:$colors-white-0;
+    }
+  }
 
   &:disabled{
   border-color: rgba($colors-black-0, 0.1);

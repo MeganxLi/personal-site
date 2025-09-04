@@ -7,7 +7,6 @@ import { motion } from 'motion/react'
 
 import AboutLink from '../components/AboutLink'
 
-const eyeSize = '128px'
 const beadSize = '80px'
 
 const About = () => {
@@ -111,7 +110,6 @@ const About = () => {
             />
             <motion.div
               className="card-eye"
-              style={{ width: eyeSize, height: eyeSize }}
               animate={{ opacity: isVisible ? 0 : 1 }}
             >
               <span
@@ -126,7 +124,6 @@ const About = () => {
             </motion.div>
             <motion.div
               className="card-eye"
-              style={{ width: eyeSize, height: eyeSize }}
               animate={{ opacity: isVisible ? 0 : 1 }}
             >
               <span
