@@ -89,18 +89,18 @@ button{
   align-self: center; 
   border: 1px solid rgba($colors-black-0, 0.2);
 
+  a{
+    color: $colors-black-0;
+  }
+
   &:hover{
-    background-color: $colors-primary-600;
-    color:$colors-white-0;
     border: 1px solid $colors-primary-600;
-    svg{
-      color:$colors-white-0;
-    }
+    outline: 1px solid $colors-primary-600;
   }
 
   &:disabled{
-  border-color: rgba($colors-black-0, 0.1);
-  color:rgba($colors-black-0, 0.2) ;
+    border-color: rgba($colors-black-0, 0.1);
+    color:rgba($colors-black-0, 0.2) ;
     svg{
       color:rgba($colors-black-0, 0.2) ;
     }
@@ -112,7 +112,7 @@ button{
   max-width: 1400px;
   padding: 5rem;
 
-  @include rwd(mobile) {
+  @include rwd(mobile-l) {
     padding: 3rem 1rem;
   }
 }

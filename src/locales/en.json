@@ -9,8 +9,9 @@
   "Skills": {
     "title": "Skills",
     "development": "Development",
-    "uiux": "Design & UI/UX",
-    "office": "Office Productivity"
+    "software": "Software skills",
+    "uiux": "Design",
+    "office": "Office"
   },
   "Works": {
     "title": "Experience",
