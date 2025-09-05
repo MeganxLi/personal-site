@@ -48,7 +48,7 @@ const PortfolioAll = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
               >
-                <div className="portfolio-img" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}/${item.link}.png')` }} />
+                <div className="portfolio-img" style={{ backgroundImage: `url('${import.meta.env.BASE_URL}/image/${item.link}.jpg')` }} />
                 <p className="portfolio-item-title">
                   {`# ${t(item.title)}`}
                 </p>

@@ -159,7 +159,7 @@ const Portfolio = () => {
 
               </div>
               <div className="portfolio-item-img">
-                <img src={`${import.meta.env.BASE_URL}/${item.link}.png`} alt="" loading="lazy" />
+                <img src={`${import.meta.env.BASE_URL}/image/${item.link}.jpg`} alt="" loading="lazy" />
               </div>
             </a>
           ))}
