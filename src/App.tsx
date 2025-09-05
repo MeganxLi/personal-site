@@ -18,11 +18,11 @@ function App() {
   const changeLang = (value:string) => {
     i18next.changeLanguage(value)
     setLang(value)
-    localStorage.setItem('local', JSON.stringify(value))
+    localStorage.setItem('language', JSON.stringify(value))
   }
 
   useLayoutEffect(() => {
-    const getLocal = JSON.parse(localStorage.getItem('local')!)
+    const getLocal = JSON.parse(localStorage.getItem('language')!)
     const getLocalLang = getLocal || LangSetting.zh
 
     i18next.changeLanguage(getLocalLang)
