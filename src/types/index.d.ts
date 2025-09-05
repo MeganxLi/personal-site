@@ -27,3 +27,7 @@ type HomeProps = {
   changeLang: (value: string) => void
   lang:string
 }
+
+type FooterProps = {
+  homeLink:string
+}

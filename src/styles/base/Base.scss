@@ -91,6 +91,9 @@ button{
 
   a{
     color: $colors-black-0;
+    &:hover{
+      color: $colors-primary-600;
+    }
   }
 
   &:hover{
@@ -105,6 +108,12 @@ button{
       color:rgba($colors-black-0, 0.2) ;
     }
   }
+
+  &.button-text{
+    border: none;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
 
 .appear{
@@ -114,33 +123,6 @@ button{
 
   @include rwd(mobile-l) {
     padding: 3rem 1rem;
-  }
-}
-
-footer{
-  box-sizing: border-box;
-  background-color:$colors-white-200;
-  width:100%;
-
-  .appear{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .link{
-    display: flex;
-    flex-direction: column;
-    a{
-      font-weight: 500;
-      font-size:100%
-    } 
-  }
-
-  .footer-home a{
-    display: flex;
-    gap:0.5rem;
-    align-items: center;
   }
 }
 

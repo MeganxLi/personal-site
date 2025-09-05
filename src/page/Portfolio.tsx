@@ -5,11 +5,13 @@ import {
   ArrowLeft, ArrowRight, ChevronRight, Figma, Github,
 } from 'lucide-react'
 import { motion } from 'motion/react'
+import { useNavigate } from 'react-router-dom'
 
 import PortfolioSetting, { AnimationEnum, github_page, github_url } from '../constants/PortfolioSetting'
 import { smartLink } from '../until/smartLink'
 
 const Portfolio = () => {
+  const navigate = useNavigate()
   const { t } = i18next
 
   const [tempIndex, setTempIndex] = useState(0)
@@ -66,7 +68,7 @@ const Portfolio = () => {
             <button type="button" onClick={prevIndex} disabled={disabledButton}><ArrowLeft size={16} /></button>
             <button type="button" onClick={nextIndex} disabled={disabledButton}><ArrowRight size={16} /></button>
           </div>
-          <button type="button" className="portfolio-all">
+          <button type="button" className="portfolio-all" onClick={() => navigate('/portfolio')}>
             View All
             <ChevronRight size={14} />
           </button>
@@ -157,7 +159,7 @@ const Portfolio = () => {
 
               </div>
               <div className="portfolio-item-img">
-                <img src={`${import.meta.env.BASE_URL}/${item.link}.png`} alt="" />
+                <img src={`${import.meta.env.BASE_URL}/${item.link}.png`} alt="" loading="lazy" />
               </div>
             </a>
           ))}
