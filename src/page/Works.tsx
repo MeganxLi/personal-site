@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 
 import i18next from 'i18next'
-import { Calendar } from 'lucide-react'
+import { Briefcase, Calendar } from 'lucide-react'
 
 import WorksSetting from '../constants/WorksSetting'
 import { formatYearMonth, calcDuration } from '../until/dateFormat'
@@ -16,18 +16,18 @@ const Works = () => {
           {WorksSetting.map((item) => (
             <div className="works-item" key={item.title}>
               <div className="work-experience">
+                <span className="work-icon"><Briefcase /></span>
+                <h4 className="work-title">{t(`${item.job_title}`)}</h4>
                 <div className="work-name">
-                  <h4 className="work-title">{t(`${item.job_title}`)}</h4>
                   <h5 className="work-company">{t(`${item.title}`)}</h5>
-
+                  <p className="work-year">
+                    {`${formatYearMonth(item.start_year)} - ${formatYearMonth(item.end_year)}`}
+                    <span className="work-total-year">
+                      {calcDuration(item.start_year, item.end_year)}
+                    </span>
+                  </p>
                 </div>
-                <p className="work-year">
-                  <Calendar size={16} />
-                  {`${formatYearMonth(item.start_year)} - ${formatYearMonth(item.end_year)}`}
-                  <span className="work-total-year">
-                    {calcDuration(item.start_year, item.end_year)}
-                  </span>
-                </p>
+
               </div>
               <ul className="work-description">
                 {item.description.map((description) => {

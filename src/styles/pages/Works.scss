@@ -9,7 +9,7 @@
   );
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px); 
-  border-radius: 12px 12px 0 0;   
+  border-radius: 4rem 4rem 0 0;   
   display: flex;
   justify-content: center;
 
@@ -26,46 +26,79 @@
   }
 
   .works-title{
+    padding-top: 4rem;
     padding-bottom: 4rem;
   }
 
   .works-content{
     .works-item{
-      &:not(:last-child)::after {
-        content: "";
-        display: block;
-        background: $colors-primary-600;
-        flex: none;
-        height: 2px;
+        position: relative;
         margin: 2rem 0;
-        opacity: 0.1;
-        transition-duration: 1400ms;
-        transition-timing-function: cubic-bezier(1, 0, 0, 1);
-        width: 1080px;
-        max-width: 100%;
-      }
+        padding-left: 4rem;
+        padding-right: 3rem;
+
+        @include rwd(mobile-l) {
+          padding-right: 2rem;
+        }
+
+        &::before{
+          content: "";
+          height: 90%;
+          width: 2px; 
+          position: absolute;
+          left: 1.25rem;
+          top: 35px;
+          background-color: $colors-primary-600;
+        }
 
       .work-experience{
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
-        @include rwd(tablet) {
+        align-items: flex-start;
+        position: relative;
+        flex-direction: column;
+        
+        @include rwd(mobile-l) {
           flex-direction: column;
           align-items: flex-start;
+        }
+
+        .work-name{
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          @include rwd(mobile-l) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+        }
+
+        .work-icon{    
+          position: absolute;
+          top: 0px;
+          left: -3.5rem;
+          svg{
+            color: $colors-primary-700;
+          }
         }
       }
 
       .work-title{
-        padding-bottom: 1rem;
+        padding-bottom: 0.5rem;
+       
       }
 
       .work-company,.work-year{
-        color: $colors-black-900;
+        color: $colors-black-900; 
+        @include rwd(tablet) {
+         padding-bottom:0.5rem;
+        }
       }
 
       .work-year{
         display: flex;
         align-items: center;
+        white-space:nowrap;
 
         svg{
           margin-right: 0.5rem;
@@ -80,7 +113,6 @@
 
       .work-description{
         padding-top: 1rem;
-        padding-left: 0.5rem;
       }
 
       .description-title{
