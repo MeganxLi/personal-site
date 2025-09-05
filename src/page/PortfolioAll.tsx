@@ -73,7 +73,7 @@ const PortfolioAll = () => {
           </AnimatePresence>
         </div>
       </div>
-      <Footer homeLink="/" />
+      <Footer homeLink="//" />
     </>
   )
 }
