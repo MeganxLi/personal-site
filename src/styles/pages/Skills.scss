@@ -66,6 +66,10 @@
       gap: 10px; 
       max-height: 200px; 
 
+      @include rwd(mobile-l) {
+        column-gap: 3rem; 
+      }
+
       .skill-group{
         display: flex;
         flex-direction: column;
