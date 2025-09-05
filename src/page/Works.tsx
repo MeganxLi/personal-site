@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
 
 import i18next from 'i18next'
-import { Briefcase, Calendar } from 'lucide-react'
+import { Briefcase } from 'lucide-react'
 
 import WorksSetting from '../constants/WorksSetting'
 import { formatYearMonth, calcDuration } from '../until/dateFormat'
