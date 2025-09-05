@@ -27,7 +27,7 @@ const PortfolioAll = () => {
         <div className="portfolio-up">
           <div className="portfolio-title">
             <h2>{t('Portfolio.title')}</h2>
-            <a href="/" className="portfolio-title-home">Home</a>
+            <a href="/" className="a-link portfolio-title-home">Home</a>
           </div>
           <div className="portfolio-button">
             <SlidersHorizontal size={16} />

@@ -140,9 +140,9 @@ const About = () => {
           <h3 className="card-title">#Megan Lee</h3>
           <h5 className="card-subtitle">{t('Home.subtitle')}</h5>
           {isVisible
-            ? <a className="card-mail" href="mailto:ant19950601@gmail.com">ant19950601@gmail.com</a>
+            ? <a className="a-link card-mail" href="mailto:ant19950601@gmail.com">ant19950601@gmail.com</a>
             : (
-              <a className="card-scroll bounce" href="#About">
+              <a className="a-link card-scroll bounce" href="#About">
                 <ChevronDown />
                 Scroll Down
               </a>
