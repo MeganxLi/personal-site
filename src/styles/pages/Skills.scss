@@ -17,8 +17,6 @@
     @include rwd(tablet) {
       flex-direction: column;
     }
-
-
   }
 
   .skills-item{
@@ -27,7 +25,13 @@
     display: grid;
     grid-template-columns: 1.5fr 2fr; 
     align-items: center;
-    gap:10px;
+    gap: 10px;
+
+    @include rwd(mobile-l) {
+      grid-template-columns: 1fr; 
+      justify-items: center;
+      padding: 2rem;
+    }
 
 
     .skill-title{
