@@ -29,5 +29,6 @@ type HomeProps = {
 }
 
 type FooterProps = {
-  homeLink:string
+  homeLink:string,
+  navigate?:boolean
 }

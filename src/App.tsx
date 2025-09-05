@@ -33,7 +33,7 @@ function App() {
       <Skills />
       <Works />
       <Portfolio />
-      <Footer homeLink="#Home" />
+      <Footer homeLink="#Home" navigate />
     </>
   )
 }
