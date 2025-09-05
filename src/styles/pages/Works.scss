@@ -19,9 +19,13 @@
 
   li{
     line-height: 1.3rem;
-    &::marker {
-    content: "- "; 
-    color: #333;   
+    position: relative;
+
+    &::before {
+      content: "- "; 
+      color: #333;
+      position: absolute;
+      left: -10px;
     }
   }
 
