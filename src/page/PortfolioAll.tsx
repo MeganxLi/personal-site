@@ -3,6 +3,7 @@ import { useState } from 'react'
 import i18next from 'i18next'
 import { Figma, Github, SlidersHorizontal } from 'lucide-react'
 import { AnimatePresence, motion } from 'motion/react'
+import { Link } from 'react-router-dom'
 
 import Footer from '../components/Footer'
 import PortfolioSetting, { github_page, github_url } from '../constants/PortfolioSetting'
@@ -27,7 +28,7 @@ const PortfolioAll = () => {
         <div className="portfolio-up">
           <div className="portfolio-title">
             <h2>{t('Portfolio.title')}</h2>
-            <a href="/" className="a-link portfolio-title-home">Home</a>
+            <Link to="//" className="a-link portfolio-title-home">Home</Link>
           </div>
           <div className="portfolio-button">
             <SlidersHorizontal size={16} />
