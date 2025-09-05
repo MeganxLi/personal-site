@@ -76,6 +76,8 @@ const About = () => {
       }
     }
 
+    handleScroll()
+
     window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('scroll', handleScroll)
 
