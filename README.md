@@ -1,10 +1,6 @@
 
-<div align="center">
-</div><img width="2268" height="765" alt="Frame 2" src="https://github.com/user-attachments/assets/aa03ce47-0028-4f91-9fb6-927970cf8086" />
-
 <p align="center">
-  
-<img width="4960" height="1674" alt="Frame 2" src="https://github.com/user-attachments/assets/f0d37de3-4d60-4f2e-a388-086811d0aec8" />
+  <img width="2268" height="765" alt="Frame 2" src="https://github.com/user-attachments/assets/aa03ce47-0028-4f91-9fb6-927970cf8086" />
   
 </p>
   
