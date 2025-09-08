@@ -38,8 +38,9 @@
         "project_name": "Web Development",
         "description1": "Designed, developed, and maintained front-end and back-end components of the organization's website, ensuring smooth functionality and user-friendly UI/UX",
         "description2": "Developed and optimized MySQL queries, performing testing and debugging to improve database performance",
-        "description3": "Implemented responsive UI/UX designs to enhance user engagement and accessibility"
-      },
+        "description3": "Implemented responsive UI/UX designs to enhance user engagement and accessibility",
+        "description4": "Built multiple interactive features, including UI/UX layouts, user authentication system, automated email notifications, and payment gateway integration, significantly enhancing site functionality and user convenience"
+     },
       "project_manage": {
         "project_name": "Project & Event Management",
         "description1": "Coordinated and executed annual international conferences hosting 150+ participants, managing schedules, logistics, and cross-cultural communication",
@@ -52,7 +53,7 @@
   "Portfolio": {
     "title": "Portfolio",
     "project1": { "title": "Simple I Ching Divination" },
-    "project2": { "title": "Coffee Guide" },
+    "project2": { "title": "Coffee Elements" },
     "project3": { "title": "Character Spotlight" },
     "project4": { "title": "Time Calculator" },
     "project5": { "title": "Dotted Sign" },

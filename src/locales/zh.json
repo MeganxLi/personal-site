@@ -38,7 +38,9 @@
         "project_name": "網頁開發",
         "description1": "設計、開發並維護組織網站前端與後端功能，確保系統運作順暢及使用者介面友善",
         "description2": "開發與優化 MySQL 查詢語法，進行測試與除錯以提升資料庫效能",
-        "description3": "實作響應式 UI/UX 設計，增強使用者互動性與可達性"
+        "description3": "實作響應式 UI/UX 設計，增強使用者互動性與可達性",
+        "description4": "開發多項互動功能，包括 UI/UX 排版設計、會員登入系統、Email 通知機制與付款金流系統，大幅提升網站完整度與使用者便利性"
+        
       },
       "project_manage": {
         "project_name": "專案與活動管理",
@@ -52,8 +54,8 @@
   "Portfolio": {
     "title": "作品集",
     "project1": { "title": "簡易易經占卜" },
-    "project2": { "title": "咖啡清單" },
-    "project3": { "title": "角色投影介紹" },
+    "project2": { "title": "咖啡元素" },
+    "project3": { "title": "角色投影" },
     "project4": { "title": "時間計算機" },
     "project5": { "title": "點點簽" },
     "project6": { "title": "Scrum 互動頁面" },
