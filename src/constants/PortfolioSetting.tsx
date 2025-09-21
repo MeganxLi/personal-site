@@ -100,7 +100,7 @@ const PortfolioSetting : PortfolioItemType[] = [
     img: true,
     github: true,
     figma: 'https://www.figma.com/design/nLI1f51bNMDNBzm5GC5n6I/%E8%A8%88%E7%AE%97%E6%A9%9F-Calculator?node-id=0-1&m=dev&t=JGZnjult1GsmbKxN-1',
-    tag: [TagEnum.vue, TagEnum.styled],
+    tag: [TagEnum.react, TagEnum.redux, TagEnum.styled, TagEnum.ant],
   },
 
 ]
